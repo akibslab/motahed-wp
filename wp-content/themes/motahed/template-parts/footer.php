@@ -11,7 +11,7 @@ $footer_bg_img = get_theme_mod('footer_bg_img', false);
 $footer_bg_color = get_theme_mod('footer_bg_color', '#24292d');
 
 $footer_social_switcher = get_theme_mod('footer_social_switcher', false);
-$nama_footer_copyright_column = $footer_social_switcher ? 'col-xl-6 col-lg-6 col-md-6 col-sm-6' : 'col-12 text-center';
+$motahed_footer_copyright_column = $footer_social_switcher ? 'col-xl-6 col-lg-6 col-md-6 col-sm-6' : 'col-12 text-center';
 
 
 
@@ -72,15 +72,15 @@ for ($num = 1; $num <= $footer_column; $num++) {
     <div class="ss-footer__copyright footer-default__copyright">
       <div class="container">
         <div class="row">
-          <div class="<?php echo esc_attr($nama_footer_copyright_column); ?>">
+          <div class="<?php echo esc_attr($motahed_footer_copyright_column); ?>">
             <div class="footer-copyright__text">
-              <p><?php print nama_copyright_text(); ?></p>
+              <p><?php print motahed_copyright_text(); ?></p>
             </div>
           </div>
           <?php if (!empty($footer_social_switcher)) : ?>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
               <div class="footer-copyright__links text-sm-end">
-                <?php nama_footer_socials(); ?>
+                <?php motahed_footer_socials(); ?>
               </div>
             </div>
           <?php endif; ?>

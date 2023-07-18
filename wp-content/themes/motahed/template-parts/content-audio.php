@@ -8,14 +8,14 @@
  * @package motahed
  */
 
-$nama_audio_url = function_exists('get_field') ? get_field('fromate_style') : NULL;
+$motahed_audio_url = function_exists('get_field') ? get_field('fromate_style') : NULL;
 if (is_single()) :
 ?>
 
     <article id="post-<?php the_ID(); ?>" <?php post_class('ss__post format-audio'); ?>>
-        <?php if (!empty($nama_audio_url)) : ?>
+        <?php if (!empty($motahed_audio_url)) : ?>
             <div class="ss-feature__image">
-                <?php echo wp_oembed_get($nama_audio_url); ?>
+                <?php echo wp_oembed_get($motahed_audio_url); ?>
             </div>
         <?php endif; ?>
 
@@ -38,7 +38,7 @@ if (is_single()) :
             </div>
 
             <!-- tags -->
-            <?php echo nama_get_tag(); ?>
+            <?php echo motahed_get_tag(); ?>
         </div>
     </article>
 
@@ -46,9 +46,9 @@ if (is_single()) :
     <article id="post-<?php the_ID(); ?>" <?php post_class('ss-post__grid format-audio'); ?>>
         <div class="ss-post__wrapper">
 
-            <?php if (!empty($nama_audio_url)) : ?>
+            <?php if (!empty($motahed_audio_url)) : ?>
                 <div class="ss-post__thumb">
-                    <?php echo wp_oembed_get($nama_audio_url); ?>
+                    <?php echo wp_oembed_get($motahed_audio_url); ?>
                 </div>
             <?php endif; ?>
             <div class="ss-post-content__wrapper">

@@ -35,7 +35,7 @@ if (post_password_required()) {
             <?php
             wp_list_comments([
               'style'       => 'ul',
-              'callback'    => 'nama_comment',
+              'callback'    => 'motahed_comment',
               'avatar_size' => 90,
               'short_ping'  => true,
             ]);

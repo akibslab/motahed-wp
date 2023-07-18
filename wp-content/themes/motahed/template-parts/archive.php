@@ -22,7 +22,7 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
 
           <?php if (have_posts()) : ?>
 
-            <?php if (apply_filters('nama_page_title', true)) : ?>
+            <?php if (apply_filters('motahed_page_title', true)) : ?>
               <header class="ss-page__header">
                 <?php
                 if (is_home() && !is_front_page()) :
@@ -55,7 +55,7 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
             ?>
 
             <div class="ss__pagination">
-              <?php nama_pagination('<i class="fal fa-arrow-left"></i>', '<i class="fal fa-arrow-right"></i>', '', ['class' => '']); ?>
+              <?php motahed_pagination('<i class="fal fa-arrow-left"></i>', '<i class="fal fa-arrow-right"></i>', '', ['class' => '']); ?>
             </div>
           <?php
           else :

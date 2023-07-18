@@ -25,7 +25,7 @@ $header_right_button_link = get_theme_mod('header_right_button_link', __('#', 'm
 $header_search_switch = get_theme_mod('header_search', false);
 $header_lang = get_theme_mod('header_lang', false);
 
-$nama_menu_col = $header_search_switch ? 'col-xl-10 col-lg-10 col-md-6 col-6' : 'col-xl-12 col-lg-12 col-md-12 col-12';
+$motahed_menu_col = $header_search_switch ? 'col-xl-10 col-lg-10 col-md-6 col-6' : 'col-xl-12 col-lg-12 col-md-12 col-12';
 ?>
 
 <!-- header-area-start -->
@@ -40,7 +40,7 @@ $nama_menu_col = $header_search_switch ? 'col-xl-10 col-lg-10 col-md-6 col-6' : 
             </div>
             <?php if (!empty($header_social_switcher)) : ?>
               <div class="header-top__socials">
-                <?php nama_header_socials(); ?>
+                <?php motahed_header_socials(); ?>
               </div>
             <?php endif; ?>
           </div>
@@ -54,7 +54,7 @@ $nama_menu_col = $header_search_switch ? 'col-xl-10 col-lg-10 col-md-6 col-6' : 
       <div class="row align-items-center">
         <div class="col-xl-4 col-lg-3">
           <div class="header__logo">
-            <?php nama_header_logo(); ?>
+            <?php motahed_header_logo(); ?>
           </div>
         </div>
         <div class="col-xl-8 col-lg-9">
@@ -106,10 +106,10 @@ $nama_menu_col = $header_search_switch ? 'col-xl-10 col-lg-10 col-md-6 col-6' : 
   <div id="header-sticky" class="header__bottom">
     <div class="container">
       <div class="row align-items-center">
-        <div class="<?php echo esc_attr($nama_menu_col) ?>">
+        <div class="<?php echo esc_attr($motahed_menu_col) ?>">
           <div class="main-menu main-menu-2">
             <nav id="mobile-menu">
-              <?php nama_header_menu(); ?>
+              <?php motahed_header_menu(); ?>
             </nav>
           </div>
         </div>

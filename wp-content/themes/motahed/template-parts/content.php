@@ -34,7 +34,7 @@ if (is_single()) : ?>
                 ?>
             </div>
             <!-- tags -->
-            <?php echo nama_get_tag(); ?>
+            <?php echo motahed_get_tag(); ?>
         </div>
     </article>
 

@@ -16,9 +16,9 @@ if (!defined('ABSPATH')) {
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
-if (!function_exists('nama_setup')) :
+if (!function_exists('motahed_setup')) :
 
-   function nama_setup() {
+   function motahed_setup() {
       /*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
@@ -63,7 +63,7 @@ if (!function_exists('nama_setup')) :
       add_theme_support(
          'custom-background',
          apply_filters(
-            'nama_custom_background_args',
+            'motahed_custom_background_args',
             array(
                'default-color' => 'ffffff',
                'default-image' => '',
@@ -131,7 +131,7 @@ if (!function_exists('nama_setup')) :
       ]);
    }
 endif;
-add_action('after_setup_theme', 'nama_setup');
+add_action('after_setup_theme', 'motahed_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -140,24 +140,24 @@ add_action('after_setup_theme', 'nama_setup');
  *
  * @global int $content_width
  */
-function nama_content_width() {
+function motahed_content_width() {
    // This variable is intended to be overruled from themes.
    // Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
    // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-   $GLOBALS['content_width'] = apply_filters('nama_content_width', 640);
+   $GLOBALS['content_width'] = apply_filters('motahed_content_width', 640);
 }
-add_action('after_setup_theme', 'nama_content_width', 0);
+add_action('after_setup_theme', 'motahed_content_width', 0);
 
 
 /**
  * Enqueue scripts and styles.
  */
 
-define('NAMA_THEME_DIR', get_template_directory());
-define('NAMA_THEME_URI', get_template_directory_uri());
-define('NAMA_THEME_CSS_DIR', NAMA_THEME_URI . '/assets/css/');
-define('NAMA_THEME_JS_DIR', NAMA_THEME_URI . '/assets/js/');
-define('NAMA_THEME_INC', NAMA_THEME_DIR . '/inc/');
+define('MOTAHED_THEME_DIR', get_template_directory());
+define('MOTAHED_THEME_URI', get_template_directory_uri());
+define('MOTAHED_THEME_CSS_DIR', MOTAHED_THEME_URI . '/assets/css/');
+define('MOTAHED_THEME_JS_DIR', MOTAHED_THEME_URI . '/assets/js/');
+define('MOTAHED_THEME_INC', MOTAHED_THEME_DIR . '/inc/');
 
 // wp_body_open
 if (!function_exists('wp_body_open')) {
@@ -170,43 +170,43 @@ if (!function_exists('wp_body_open')) {
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require NAMA_THEME_INC . 'template-functions.php';
+require MOTAHED_THEME_INC . 'template-functions.php';
 
 /**
  * Custom template helper function for this theme.
  */
-require NAMA_THEME_INC . 'template-helper.php';
+require MOTAHED_THEME_INC . 'template-helper.php';
 
 
 /**
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {
-   require NAMA_THEME_INC . 'jetpack.php';
+   require MOTAHED_THEME_INC . 'jetpack.php';
 }
 
 /**
  * include motahed functions file
  */
-require_once NAMA_THEME_INC . 'class-navwalker.php';
+require_once MOTAHED_THEME_INC . 'class-navwalker.php';
 if (!class_exists('TGM_Plugin_Activation')) {
-   require_once NAMA_THEME_INC . 'required-plugin.php';
+   require_once MOTAHED_THEME_INC . 'required-plugin.php';
 }
-require_once NAMA_THEME_INC . '/common/motahed-scripts.php';
+require_once MOTAHED_THEME_INC . '/common/motahed-scripts.php';
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function nama_pingback_header() {
+function motahed_pingback_header() {
    if (is_singular() && pings_open()) {
       printf('<link rel="pingback" href="%s">', esc_url(get_bloginfo('pingback_url')));
    }
 }
-add_action('wp_head', 'nama_pingback_header');
+add_action('wp_head', 'motahed_pingback_header');
 
 // Change position in comment form
 // ----------------------------------------------------------------------------------------
-function nama_theme_comment_field($fields) {
+function motahed_theme_comment_field($fields) {
    $comment = $fields['comment'];
    $author  = $fields['author'];
    $email   = $fields['email'];
@@ -227,12 +227,12 @@ function nama_theme_comment_field($fields) {
 
    return $fields;
 }
-add_filter('comment_form_fields', 'nama_theme_comment_field');
+add_filter('comment_form_fields', 'motahed_theme_comment_field');
 
 
-// nama_comment 
-if (!function_exists('nama_comment')) {
-   function nama_comment($comment, $args, $depth) {
+// motahed_comment 
+if (!function_exists('motahed_comment')) {
+   function motahed_comment($comment, $args, $depth) {
       $GLOBAL['comment'] = $comment;
       extract($args, EXTR_SKIP);
       $args['reply_text'] = 'Reply';
@@ -269,7 +269,7 @@ if (!function_exists('nama_comment')) {
  * @param string $content  String of HTML content.
  * @return string $content Amended string of HTML content.
  */
-function nama_shortcode_extra_content_remove($content) {
+function motahed_shortcode_extra_content_remove($content) {
 
    $array = [
       '<p>['    => '[',
@@ -278,19 +278,19 @@ function nama_shortcode_extra_content_remove($content) {
    ];
    return strtr($content, $array);
 }
-add_filter('the_content', 'nama_shortcode_extra_content_remove');
+add_filter('the_content', 'motahed_shortcode_extra_content_remove');
 
 /**
  * Change the excerpt more string
  */
-function nama_excerpt_more($more) {
+function motahed_excerpt_more($more) {
    return '&hellip;';
 }
-add_filter('excerpt_more', 'nama_excerpt_more');
+add_filter('excerpt_more', 'motahed_excerpt_more');
 
-// nama_search_filter_form
-if (!function_exists('nama_search_filter_form')) {
-   function nama_search_filter_form($form) {
+// motahed_search_filter_form
+if (!function_exists('motahed_search_filter_form')) {
+   function motahed_search_filter_form($form) {
 
       $form = sprintf(
          '<div class="ss-widget__search"><div class="search-px"><form action="%s" method="get">
@@ -304,12 +304,12 @@ if (!function_exists('nama_search_filter_form')) {
 
       return $form;
    }
-   add_filter('get_search_form', 'nama_search_filter_form');
+   add_filter('get_search_form', 'motahed_search_filter_form');
 }
 
 
-add_action('admin_enqueue_scripts', 'nama_admin_custom_scripts');
-function nama_admin_custom_scripts() {
+add_action('admin_enqueue_scripts', 'motahed_admin_custom_scripts');
+function motahed_admin_custom_scripts() {
    wp_enqueue_media();
    wp_enqueue_style('customizer-style', get_template_directory_uri() . '/inc/css/customizer-style.css', array());
    wp_enqueue_script('motahed-admin-custom', get_template_directory_uri() . '/inc/js/admin_custom.js', ['jquery'], '', true);
@@ -322,11 +322,11 @@ function nama_admin_custom_scripts() {
  *
  * @return void
  */
-function nama_register_elementor_locations($elementor_theme_manager) {
+function motahed_register_elementor_locations($elementor_theme_manager) {
 
    $elementor_theme_manager->register_all_core_location();
 }
-add_action('elementor/theme/register_locations', 'nama_register_elementor_locations');
+add_action('elementor/theme/register_locations', 'motahed_register_elementor_locations');
 
 /**
  * Check hide title.
@@ -335,8 +335,8 @@ add_action('elementor/theme/register_locations', 'nama_register_elementor_locati
  *
  * @return bool
  */
-if (!function_exists('nama_check_hide_title')) {
-   function nama_check_hide_title($val) {
+if (!function_exists('motahed_check_hide_title')) {
+   function motahed_check_hide_title($val) {
       if (defined('ELEMENTOR_VERSION')) {
          $current_doc = Elementor\Plugin::instance()->documents->get(get_the_ID());
          if ($current_doc && 'yes' === $current_doc->get_settings('hide_title')) {
@@ -346,4 +346,4 @@ if (!function_exists('nama_check_hide_title')) {
       return $val;
    }
 }
-add_filter('nama_page_title', 'nama_check_hide_title');
+add_filter('motahed_page_title', 'motahed_check_hide_title');

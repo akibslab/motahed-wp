@@ -126,7 +126,7 @@ class SS_FAQ extends Widget_Base {
 			[
 				'label' => esc_html__('Question', 'ss-addons'),
 				'type' => Controls_Manager::TEXT,
-				'default' => esc_html__('How to invest in Nama?', 'ss-addons'),
+				'default' => esc_html__('How to invest in Motahed?', 'ss-addons'),
 				'label_block' => true,
 			]
 		);
@@ -135,7 +135,7 @@ class SS_FAQ extends Widget_Base {
 			[
 				'label' => esc_html__('Answer', 'ss-addons'),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => esc_html__('Investing in Nama requires registration and completion of all required information.', 'ss-addons'),
+				'default' => esc_html__('Investing in Motahed requires registration and completion of all required information.', 'ss-addons'),
 				'label_block' => true,
 			]
 		);
@@ -147,19 +147,19 @@ class SS_FAQ extends Widget_Base {
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'accordion_title' => esc_html__('How to invest in Nama?', 'ss-addons'),
+						'accordion_title' => esc_html__('How to invest in Motahed?', 'ss-addons'),
 					],
 					[
-						'accordion_title' => esc_html__('How do I know about new opportunities in Nama?', 'ss-addons'),
+						'accordion_title' => esc_html__('How do I know about new opportunities in Motahed?', 'ss-addons'),
 					],
 					[
-						'accordion_title' => esc_html__('Is the profit guaranteed in nama?', 'ss-addons'),
+						'accordion_title' => esc_html__('Is the profit guaranteed in Motahed?', 'ss-addons'),
 					],
 					[
 						'accordion_title' => esc_html__('How can investment returns be obtained if the investment opportunity is profitable?', 'ss-addons'),
 					],
 					[
-						'accordion_title' => esc_html__('Can non-Saudis invest in Nama?', 'ss-addons'),
+						'accordion_title' => esc_html__('Can non-Saudis invest in Motahed?', 'ss-addons'),
 					],
 				],
 				'title_field' => '{{{ accordion_title }}}',

@@ -8,13 +8,13 @@
  * @package motahed
  */
 
-$nama_blog_btn = get_theme_mod('nama_blog_btn', 'Read More');
-$nama_blog_btn_switch = get_theme_mod('nama_blog_btn_switch', true);
+$motahed_blog_btn = get_theme_mod('motahed_blog_btn', 'Read More');
+$motahed_blog_btn_switch = get_theme_mod('motahed_blog_btn_switch', true);
 
 ?>
 
-<?php if (!empty($nama_blog_btn_switch)) : ?>
+<?php if (!empty($motahed_blog_btn_switch)) : ?>
     <div class="ss-post__btn">
-        <a href="<?php the_permalink(); ?>" class="ss-btn"><?php print esc_html($nama_blog_btn); ?></a>
+        <a href="<?php the_permalink(); ?>" class="ss-btn"><?php print esc_html($motahed_blog_btn); ?></a>
     </div>
 <?php endif; ?>

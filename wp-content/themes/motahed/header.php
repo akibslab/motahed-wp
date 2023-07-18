@@ -29,16 +29,16 @@
 
 
     <?php
-    $nama_backtotop_switcher = get_theme_mod('nama_backtotop', false);
+    $motahed_backtotop_switcher = get_theme_mod('motahed_backtotop', false);
 
-    $nama_preloader_switcher = get_theme_mod('nama_preloader', false);
-    $nama_preloader_logo = get_template_directory_uri() . '/assets/img/preloader.svg';
+    $motahed_preloader_switcher = get_theme_mod('motahed_preloader', false);
+    $motahed_preloader_logo = get_template_directory_uri() . '/assets/img/preloader.svg';
 
-    $preloader_logo = get_theme_mod('preloader_logo', $nama_preloader_logo);
+    $preloader_logo = get_theme_mod('preloader_logo', $motahed_preloader_logo);
 
     ?>
 
-    <?php if (!empty($nama_preloader_switcher)) : ?>
+    <?php if (!empty($motahed_preloader_switcher)) : ?>
         <!-- Preloader -->
         <div class="preloader" style="background-image: url(<?php echo esc_url($preloader_logo); ?>);"></div>
         <!-- pre loader area end -->
@@ -46,7 +46,7 @@
 
 
     <!-- back to top start -->
-    <div class="progress-wrap <?php echo !$nama_backtotop_switcher ? 'd-none' : '' ?>">
+    <div class="progress-wrap <?php echo !$motahed_backtotop_switcher ? 'd-none' : '' ?>">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
@@ -63,6 +63,6 @@
     <!-- header end -->
 
     <!-- wrapper-box start -->
-    <?php do_action('nama_before_main_content'); ?>
+    <?php do_action('motahed_before_main_content'); ?>
 
     <main class="clearfix" id="main">

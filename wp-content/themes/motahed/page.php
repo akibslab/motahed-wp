@@ -24,7 +24,7 @@ get_header();
           <?php
           if (have_posts()) :
 
-            if (apply_filters('nama_page_title', true)) : ?>
+            if (apply_filters('motahed_page_title', true)) : ?>
               <header class="ss-page__header">
                 <?php
                 single_post_title('<h1 class="entry-title ss-page__title">', '</h1>');

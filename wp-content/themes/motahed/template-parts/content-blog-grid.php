@@ -10,10 +10,10 @@
 
 $categories = get_the_terms($post->ID, 'category');
 
-$nama_blog_date = get_theme_mod('nama_blog_date', true);
-$nama_blog_comments = get_theme_mod('nama_blog_comments', true);
-$nama_blog_author = get_theme_mod('nama_blog_author', true);
-$nama_blog_cat = get_theme_mod('nama_blog_cat', false);
+$motahed_blog_date = get_theme_mod('motahed_blog_date', true);
+$motahed_blog_comments = get_theme_mod('motahed_blog_comments', true);
+$motahed_blog_author = get_theme_mod('motahed_blog_author', true);
+$motahed_blog_cat = get_theme_mod('motahed_blog_cat', false);
 
 ?>
 
@@ -27,7 +27,7 @@ $nama_blog_cat = get_theme_mod('nama_blog_cat', false);
       <?php endif; ?>
       <div class="blog__content">
          <div class="blog__tag mb-10">
-            <?php nama_get_category(); ?>
+            <?php motahed_get_category(); ?>
          </div>
          <h3 class="blog__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 

@@ -21,13 +21,13 @@
  */
 
 /* Check if Class Exists. */
-if (!class_exists('Nama_Navwalker_Class')) {
+if (!class_exists('Motahed_Navwalker_Class')) {
     /**
      * WP_Bootstrap_Navwalker class.
      *
      * @extends Walker_Nav_Menu
      */
-    class Nama_Navwalker_Class extends Walker_Nav_Menu {
+    class Motahed_Navwalker_Class extends Walker_Nav_Menu {
 
         /**
          * Starts the list before the elements are added.

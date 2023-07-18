@@ -31,7 +31,7 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
             endwhile;
             ?>
             <div class="ss__pagination">
-              <?php nama_pagination('<i class="fal fa-arrow-left"></i>', '<i class="fal fa-arrow-right"></i>', '', ['class' => '']); ?>
+              <?php motahed_pagination('<i class="fal fa-arrow-left"></i>', '<i class="fal fa-arrow-right"></i>', '', ['class' => '']); ?>
             </div>
           <?php
           else :

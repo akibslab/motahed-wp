@@ -18,9 +18,9 @@
 
 require_once dirname(__FILE__) . '/class-tgm-plugin-activation.php';
 
-add_action('tgmpa_register', 'nama_register_required_plugins');
+add_action('tgmpa_register', 'motahed_register_required_plugins');
 
-function nama_register_required_plugins() {
+function motahed_register_required_plugins() {
   /*
      * Array of plugin arrays. Required keys are name and slug.
      * If the source is NOT from the .org repo, then source is also required.

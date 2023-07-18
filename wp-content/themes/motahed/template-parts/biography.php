@@ -1,12 +1,12 @@
 <?php
 $author_data = get_the_author_meta('description', get_query_var('author'));
-$author_info = get_the_author_meta('nama_write_by');
-$facebook_url = get_the_author_meta('nama_facebook');
-$twitter_url = get_the_author_meta('nama_twitter');
-$linkedin_url = get_the_author_meta('nama_linkedin');
-$instagram_url = get_the_author_meta('nama_instagram');
-$nama_url = get_the_author_meta('nama_youtube');
-$nama_write_by = get_the_author_meta('nama_write_by');
+$author_info = get_the_author_meta('motahed_write_by');
+$facebook_url = get_the_author_meta('motahed_facebook');
+$twitter_url = get_the_author_meta('motahed_twitter');
+$linkedin_url = get_the_author_meta('motahed_linkedin');
+$instagram_url = get_the_author_meta('motahed_instagram');
+$motahed_url = get_the_author_meta('motahed_youtube');
+$motahed_write_by = get_the_author_meta('motahed_write_by');
 $author_bio_avatar_size = 180;
 if ($author_data != '') :
 ?>

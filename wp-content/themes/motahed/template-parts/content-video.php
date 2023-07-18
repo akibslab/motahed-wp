@@ -8,7 +8,7 @@
  * @package motahed
  */
 
-$nama_video_url = function_exists('get_field') ? get_field('fromate_style') : NULL;
+$motahed_video_url = function_exists('get_field') ? get_field('fromate_style') : NULL;
 
 if (is_single()) :
 ?>
@@ -17,9 +17,9 @@ if (is_single()) :
         <?php if (has_post_thumbnail()) : ?>
             <div class="ss-feature__image">
                 <?php the_post_thumbnail('full', ['class' => 'img-responsive']); ?>
-                <?php if (!empty($nama_video_url)) : ?>
+                <?php if (!empty($motahed_video_url)) : ?>
                     <div class="ss-post__video ss-video-btn__style">
-                        <a href="<?php print esc_url($nama_video_url); ?>" class="popup-video"><i class="fa-solid fa-play"></i></a>
+                        <a href="<?php print esc_url($motahed_video_url); ?>" class="popup-video"><i class="fa-solid fa-play"></i></a>
                     <?php endif; ?>
                     </div>
             </div>
@@ -44,7 +44,7 @@ if (is_single()) :
             </div>
 
             <!-- tags -->
-            <?php echo nama_get_tag(); ?>
+            <?php echo motahed_get_tag(); ?>
         </div>
     </article>
 
@@ -58,9 +58,9 @@ if (is_single()) :
                     <a href="<?php the_permalink(); ?>">
                         <?php the_post_thumbnail('full', ['class' => 'img-responsive']); ?>
                     </a>
-                    <?php if (!empty($nama_video_url)) : ?>
+                    <?php if (!empty($motahed_video_url)) : ?>
                         <div class="ss-post__video ss-video-btn__style">
-                            <a href="<?php print esc_url($nama_video_url); ?>" class="popup-video"><i class="fa-solid fa-play"></i></a>
+                            <a href="<?php print esc_url($motahed_video_url); ?>" class="popup-video"><i class="fa-solid fa-play"></i></a>
                         <?php endif; ?>
                         </div>
                 </div>

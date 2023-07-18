@@ -9,16 +9,16 @@
  */
 
 /**
- * [nama_header_lang description]
+ * [motahed_header_lang description]
  * @return [type] [description]
  */
-function nama_header_lang_default() {
-    $nama_header_lang = get_theme_mod('header_lang', false);
-    if ($nama_header_lang) : ?>
+function motahed_header_lang_default() {
+    $motahed_header_lang = get_theme_mod('header_lang', false);
+    if ($motahed_header_lang) : ?>
 
         <select>
             <option><a href="javascript:void(0)" class="lang__btn"><?php print esc_html__('English', 'motahed'); ?> </a></option>
-            <?php do_action('nama_language'); ?>
+            <?php do_action('motahed_language'); ?>
         </select>
 
     <?php endif; ?>
@@ -26,13 +26,13 @@ function nama_header_lang_default() {
 }
 
 /**
- * [nama_language_list description]
+ * [motahed_language_list description]
  * @return [type] [description]
  */
-function _nama_language($mar) {
+function _motahed_language($mar) {
     return $mar;
 }
-function nama_language_list() {
+function motahed_language_list() {
 
     $mar = '';
     $languages = apply_filters('wpml_active_languages', NULL, 'orderby=id&order=desc');
@@ -49,58 +49,58 @@ function nama_language_list() {
         $mar .= '<option>' . esc_html__('Bangla', 'motahed') . '</option>';
         $mar .= '<option>' . esc_html__('French', 'motahed') . '</option>';
     }
-    print _nama_language($mar);
+    print _motahed_language($mar);
 }
-add_action('nama_language', 'nama_language_list');
+add_action('motahed_language', 'motahed_language_list');
 
 
 // Header logo
-function nama_header_logo() { ?>
+function motahed_header_logo() { ?>
     <?php
     // site logo
-    $nama_logo = get_template_directory_uri() . '/assets/img/logo/logo-black.png';
-    $nama_site_logo = get_theme_mod('site_logo', $nama_logo);
+    $motahed_logo = get_template_directory_uri() . '/assets/img/logo/logo-black.png';
+    $motahed_site_logo = get_theme_mod('site_logo', $motahed_logo);
     ?>
 
     <a class="site__logo" href="<?php print esc_url(home_url('/')); ?>">
-        <img src="<?php echo esc_url($nama_site_logo); ?>" alt="<?php print esc_attr__('logo', 'motahed'); ?>" />
+        <img src="<?php echo esc_url($motahed_site_logo); ?>" alt="<?php print esc_attr__('logo', 'motahed'); ?>" />
     </a>
 <?php
 }
 
 // Header sticky logo
-function nama_header_sticky_logo() { ?>
+function motahed_header_sticky_logo() { ?>
     <?php
-    $nama_logo_black = get_template_directory_uri() . '/assets/img/logo/logo-black.png';
-    $nama_secondary_logo = get_theme_mod('secondary_logo', $nama_logo_black);
+    $motahed_logo_black = get_template_directory_uri() . '/assets/img/logo/logo-black.png';
+    $motahed_secondary_logo = get_theme_mod('secondary_logo', $motahed_logo_black);
     ?>
     <a class="sticky-logo" href="<?php print esc_url(home_url('/')); ?>">
-        <img src="<?php print esc_url($nama_secondary_logo); ?>" alt="<?php print esc_attr__('logo', 'motahed'); ?>" />
+        <img src="<?php print esc_url($motahed_secondary_logo); ?>" alt="<?php print esc_attr__('logo', 'motahed'); ?>" />
     </a>
     <?php
 }
 
 // Header Mobile Logo
-function nama_mobile_logo() {
+function motahed_mobile_logo() {
     // side info
-    $nama_mobile_logo_hide = get_theme_mod('nama_mobile_logo_hide', false);
+    $motahed_mobile_logo_hide = get_theme_mod('motahed_mobile_logo_hide', false);
 
-    $nama_site_logo = get_theme_mod('primary_logo', get_template_directory_uri() . '/assets/img/logo/logo-white.png');
+    $motahed_site_logo = get_theme_mod('primary_logo', get_template_directory_uri() . '/assets/img/logo/logo-white.png');
 
-    if (!empty($nama_mobile_logo_hide)) : ?>
+    if (!empty($motahed_mobile_logo_hide)) : ?>
         <div class="side__logo mb-25">
             <a class="sideinfo-logo" href="<?php print esc_url(home_url('/')); ?>">
-                <img src="<?php print esc_url($nama_site_logo); ?>" alt="<?php print esc_attr__('logo', 'motahed'); ?>" />
+                <img src="<?php print esc_url($motahed_site_logo); ?>" alt="<?php print esc_attr__('logo', 'motahed'); ?>" />
             </a>
         </div>
     <?php endif;
 }
 
 /**
- * [nama_header_socials description]
+ * [motahed_header_socials description]
  * @return [type] [description]
  */
-function nama_header_socials() {
+function motahed_header_socials() {
     $header_fb_link = get_theme_mod('header_fb_link', __('https://facebook.com/', 'motahed'));
     $header_ig_link = get_theme_mod('header_ig_link', __('https://instagram.com/', 'motahed'));
     $header_linkedin_link = get_theme_mod('header_linkedin_link', __('https://linkedin.com/', 'motahed'));
@@ -129,49 +129,49 @@ function nama_header_socials() {
     <?php endif;
 }
 
-function nama_footer_socials() {
-    $nama_footer_fb_link = get_theme_mod('footer_fb_link', __('#', 'motahed'));
-    $nama_footer_twitter_link = get_theme_mod('footer_twitter_link', __('#', 'motahed'));
-    $nama_footer_instagram_link = get_theme_mod('footer_instagram_link', __('#', 'motahed'));
-    $nama_footer_linkedin_link = get_theme_mod('footer_linkedin_link', __('#', 'motahed'));
-    $nama_footer_youtube_link = get_theme_mod('footer_youtube_link', __('#', 'motahed'));
+function motahed_footer_socials() {
+    $motahed_footer_fb_link = get_theme_mod('footer_fb_link', __('#', 'motahed'));
+    $motahed_footer_twitter_link = get_theme_mod('footer_twitter_link', __('#', 'motahed'));
+    $motahed_footer_instagram_link = get_theme_mod('footer_instagram_link', __('#', 'motahed'));
+    $motahed_footer_linkedin_link = get_theme_mod('footer_linkedin_link', __('#', 'motahed'));
+    $motahed_footer_youtube_link = get_theme_mod('footer_youtube_link', __('#', 'motahed'));
     ?>
     <ul>
-        <?php if (!empty($nama_footer_fb_link)) : ?>
+        <?php if (!empty($motahed_footer_fb_link)) : ?>
             <li>
-                <a href="<?php print esc_url($nama_footer_fb_link); ?>">
+                <a href="<?php print esc_url($motahed_footer_fb_link); ?>">
                     <i class="fab fa-facebook-f"></i>
                 </a>
             </li>
         <?php endif; ?>
 
-        <?php if (!empty($nama_footer_twitter_link)) : ?>
+        <?php if (!empty($motahed_footer_twitter_link)) : ?>
             <li>
-                <a href="<?php print esc_url($nama_footer_twitter_link); ?>">
+                <a href="<?php print esc_url($motahed_footer_twitter_link); ?>">
                     <i class="fab fa-twitter"></i>
                 </a>
             </li>
         <?php endif; ?>
 
-        <?php if (!empty($nama_footer_instagram_link)) : ?>
+        <?php if (!empty($motahed_footer_instagram_link)) : ?>
             <li>
-                <a href="<?php print esc_url($nama_footer_instagram_link); ?>">
+                <a href="<?php print esc_url($motahed_footer_instagram_link); ?>">
                     <i class="fab fa-instagram"></i>
                 </a>
             </li>
         <?php endif; ?>
 
-        <?php if (!empty($nama_footer_linkedin_link)) : ?>
+        <?php if (!empty($motahed_footer_linkedin_link)) : ?>
             <li>
-                <a href="<?php print esc_url($nama_footer_linkedin_link); ?>">
+                <a href="<?php print esc_url($motahed_footer_linkedin_link); ?>">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </li>
         <?php endif; ?>
 
-        <?php if (!empty($nama_footer_youtube_link)) : ?>
+        <?php if (!empty($motahed_footer_youtube_link)) : ?>
             <li>
-                <a href="<?php print esc_url($nama_footer_youtube_link); ?>">
+                <a href="<?php print esc_url($motahed_footer_youtube_link); ?>">
                     <i class="fab fa-youtube"></i>
                 </a>
             </li>
@@ -181,27 +181,27 @@ function nama_footer_socials() {
 }
 
 /**
- * [nama_header_menu description]
+ * [motahed_header_menu description]
  * @return [type] [description]
  */
-function nama_header_menu() {
+function motahed_header_menu() {
 
     wp_nav_menu([
         'theme_location' => 'main-menu',
         'menu_class'     => '',
         'container'      => '',
-        'fallback_cb'    => 'Nama_Navwalker_Class::fallback',
-        'walker'         => new Nama_Navwalker_Class,
+        'fallback_cb'    => 'Motahed_Navwalker_Class::fallback',
+        'walker'         => new Motahed_Navwalker_Class,
     ]);
 }
 
 /**
- * [nama_header_menu description]
+ * [motahed_header_menu description]
  * @return [type] [description]
  */
-function nama_mobile_menu() {
+function motahed_mobile_menu() {
 
-    $nama_menu = wp_nav_menu([
+    $motahed_menu = wp_nav_menu([
         'theme_location' => 'main-menu',
         'menu_class'     => '',
         'container'      => '',
@@ -209,28 +209,28 @@ function nama_mobile_menu() {
         'echo'           => false,
     ]);
 
-    $nama_menu = str_replace("menu-item-has-children", "menu-item-has-children has-children", $nama_menu);
-    echo wp_kses_post($nama_menu);
+    $motahed_menu = str_replace("menu-item-has-children", "menu-item-has-children has-children", $motahed_menu);
+    echo wp_kses_post($motahed_menu);
 ?>
 <?php
 }
 
 /**
- * [nama_footer_menu description]
+ * [motahed_footer_menu description]
  * @return [type] [description]
  */
-function nama_footer_menu() {
+function motahed_footer_menu() {
     wp_nav_menu([
         'theme_location' => 'footer-menu',
         'menu_class'     => 'm-0',
         'container'      => '',
-        'fallback_cb'    => 'Nama_Navwalker_Class::fallback',
-        'walker'         => new Nama_Navwalker_Class,
+        'fallback_cb'    => 'Motahed_Navwalker_Class::fallback',
+        'walker'         => new Motahed_Navwalker_Class,
     ]);
 }
-// nama_copyright_text
-function nama_copyright_text() {
-    print get_theme_mod('nama_copyright', nama_kses('© 2022 motahed, All Rights Reserved. Design By <a href="#">SecureSofts</a>'));
+// motahed_copyright_text
+function motahed_copyright_text() {
+    print get_theme_mod('motahed_copyright', motahed_kses('© 2022 motahed, All Rights Reserved. Design By <a href="#">SecureSofts</a>'));
 }
 
 
@@ -238,14 +238,14 @@ function nama_copyright_text() {
  *
  * pagination
  */
-if (!function_exists('nama_pagination')) {
+if (!function_exists('motahed_pagination')) {
 
-    function _nama_pagi_callback($pagination) {
+    function _motahed_pagi_callback($pagination) {
         return $pagination;
     }
 
     //page navigation
-    function nama_pagination($prev, $next, $pages, $args) {
+    function motahed_pagination($prev, $next, $pages, $args) {
         global $wp_query, $wp_rewrite;
         $menu = '';
         $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
@@ -288,15 +288,15 @@ if (!function_exists('nama_pagination')) {
             $pagi .= '</ul>';
         }
 
-        print _nama_pagi_callback($pagi);
+        print _motahed_pagi_callback($pagi);
     }
 }
 
 
 // header top bg color
-function nama_breadcrumb_bg_color() {
-    $color_code = get_theme_mod('nama_breadcrumb_bg_color', '#222');
-    wp_enqueue_style('motahed-custom', NAMA_THEME_CSS_DIR . 'motahed-custom.css', []);
+function motahed_breadcrumb_bg_color() {
+    $color_code = get_theme_mod('motahed_breadcrumb_bg_color', '#222');
+    wp_enqueue_style('motahed-custom', MOTAHED_THEME_CSS_DIR . 'motahed-custom.css', []);
     if ($color_code != '') {
         $custom_css = '';
         $custom_css .= ".breadcrumb-bg.gray-bg{ background: " . $color_code . "}";
@@ -304,12 +304,12 @@ function nama_breadcrumb_bg_color() {
         wp_add_inline_style('motahed-breadcrumb-bg', $custom_css);
     }
 }
-add_action('wp_enqueue_scripts', 'nama_breadcrumb_bg_color');
+add_action('wp_enqueue_scripts', 'motahed_breadcrumb_bg_color');
 
 // breadcrumb-spacing top
-function nama_breadcrumb_spacing() {
-    $padding_px = get_theme_mod('nama_breadcrumb_spacing', '160px');
-    wp_enqueue_style('motahed-custom', NAMA_THEME_CSS_DIR . 'motahed-custom.css', []);
+function motahed_breadcrumb_spacing() {
+    $padding_px = get_theme_mod('motahed_breadcrumb_spacing', '160px');
+    wp_enqueue_style('motahed-custom', MOTAHED_THEME_CSS_DIR . 'motahed-custom.css', []);
     if ($padding_px != '') {
         $custom_css = '';
         $custom_css .= ".breadcrumb-spacing{ padding-top: " . $padding_px . "}";
@@ -317,12 +317,12 @@ function nama_breadcrumb_spacing() {
         wp_add_inline_style('motahed-breadcrumb-top-spacing', $custom_css);
     }
 }
-add_action('wp_enqueue_scripts', 'nama_breadcrumb_spacing');
+add_action('wp_enqueue_scripts', 'motahed_breadcrumb_spacing');
 
 // breadcrumb-spacing bottom
-function nama_breadcrumb_bottom_spacing() {
-    $padding_px = get_theme_mod('nama_breadcrumb_bottom_spacing', '160px');
-    wp_enqueue_style('motahed-custom', NAMA_THEME_CSS_DIR . 'motahed-custom.css', []);
+function motahed_breadcrumb_bottom_spacing() {
+    $padding_px = get_theme_mod('motahed_breadcrumb_bottom_spacing', '160px');
+    wp_enqueue_style('motahed-custom', MOTAHED_THEME_CSS_DIR . 'motahed-custom.css', []);
     if ($padding_px != '') {
         $custom_css = '';
         $custom_css .= ".breadcrumb-spacing{ padding-bottom: " . $padding_px . "}";
@@ -330,12 +330,12 @@ function nama_breadcrumb_bottom_spacing() {
         wp_add_inline_style('motahed-breadcrumb-bottom-spacing', $custom_css);
     }
 }
-add_action('wp_enqueue_scripts', 'nama_breadcrumb_bottom_spacing');
+add_action('wp_enqueue_scripts', 'motahed_breadcrumb_bottom_spacing');
 
 // scrollUp
-function nama_scrollup_switch() {
-    $scrollup_switch = get_theme_mod('nama_scrollup_switch', false);
-    wp_enqueue_style('motahed-custom', NAMA_THEME_CSS_DIR . 'motahed-custom.css', []);
+function motahed_scrollup_switch() {
+    $scrollup_switch = get_theme_mod('motahed_scrollup_switch', false);
+    wp_enqueue_style('motahed-custom', MOTAHED_THEME_CSS_DIR . 'motahed-custom.css', []);
     if ($scrollup_switch) {
         $custom_css = '';
         $custom_css .= "#scrollUp{ display: none !important;}";
@@ -343,12 +343,12 @@ function nama_scrollup_switch() {
         wp_add_inline_style('motahed-scrollup-switch', $custom_css);
     }
 }
-add_action('wp_enqueue_scripts', 'nama_scrollup_switch');
+add_action('wp_enqueue_scripts', 'motahed_scrollup_switch');
 
 // theme custom color
-function nama_custom_color() {
-    $color_code = get_theme_mod('nama_color_option', '#2b4eff');
-    wp_enqueue_style('motahed-custom', NAMA_THEME_CSS_DIR . 'motahed-custom.css', []);
+function motahed_custom_color() {
+    $color_code = get_theme_mod('motahed_color_option', '#2b4eff');
+    wp_enqueue_style('motahed-custom', MOTAHED_THEME_CSS_DIR . 'motahed-custom.css', []);
     if ($color_code != '') {
         $custom_css = '';
         $custom_css .= ".demo-class { background-color: " . $color_code . "}";
@@ -362,13 +362,13 @@ function nama_custom_color() {
         wp_add_inline_style('motahed-custom', $custom_css);
     }
 }
-add_action('wp_enqueue_scripts', 'nama_custom_color');
+add_action('wp_enqueue_scripts', 'motahed_custom_color');
 
 
 // theme primary color
-function nama_custom_color_primary() {
-    $color_code = get_theme_mod('nama_color_option_2', '#f2277e');
-    wp_enqueue_style('motahed-custom', NAMA_THEME_CSS_DIR . 'motahed-custom.css', []);
+function motahed_custom_color_primary() {
+    $color_code = get_theme_mod('motahed_color_option_2', '#f2277e');
+    wp_enqueue_style('motahed-custom', MOTAHED_THEME_CSS_DIR . 'motahed-custom.css', []);
     if ($color_code != '') {
         $custom_css = '';
         $custom_css .= ".demo-class { background-color: " . $color_code . "}";
@@ -379,12 +379,12 @@ function nama_custom_color_primary() {
         wp_add_inline_style('motahed-custom', $custom_css);
     }
 }
-add_action('wp_enqueue_scripts', 'nama_custom_color_primary');
+add_action('wp_enqueue_scripts', 'motahed_custom_color_primary');
 
 // theme scrollUp color
-function nama_custom_color_scrollup() {
-    $color_code = get_theme_mod('nama_color_scrollup', '#2b4eff');
-    wp_enqueue_style('motahed-custom', NAMA_THEME_CSS_DIR . 'motahed-custom.css', []);
+function motahed_custom_color_scrollup() {
+    $color_code = get_theme_mod('motahed_color_scrollup', '#2b4eff');
+    wp_enqueue_style('motahed-custom', MOTAHED_THEME_CSS_DIR . 'motahed-custom.css', []);
     if ($color_code != '') {
         $custom_css = '';
         $custom_css .= ".demo-class { color: " . $color_code . "}";
@@ -392,12 +392,12 @@ function nama_custom_color_scrollup() {
         wp_add_inline_style('motahed-custom', $custom_css);
     }
 }
-add_action('wp_enqueue_scripts', 'nama_custom_color_scrollup');
+add_action('wp_enqueue_scripts', 'motahed_custom_color_scrollup');
 
 // theme secondary color
-function nama_custom_color_secondary() {
-    $color_code = get_theme_mod('nama_color_option_3', '#30a820');
-    wp_enqueue_style('motahed-custom', NAMA_THEME_CSS_DIR . 'motahed-custom.css', []);
+function motahed_custom_color_secondary() {
+    $color_code = get_theme_mod('motahed_color_option_3', '#30a820');
+    wp_enqueue_style('motahed-custom', MOTAHED_THEME_CSS_DIR . 'motahed-custom.css', []);
     if ($color_code != '') {
         $custom_css = '';
         $custom_css .= ".demo-class { background-color: " . $color_code . "}";
@@ -408,12 +408,12 @@ function nama_custom_color_secondary() {
         wp_add_inline_style('motahed-custom', $custom_css);
     }
 }
-add_action('wp_enqueue_scripts', 'nama_custom_color_secondary');
+add_action('wp_enqueue_scripts', 'motahed_custom_color_secondary');
 
 // theme secondary 2 color
-function nama_custom_color_secondary_2() {
-    $color_code = get_theme_mod('nama_color_option_3_2', '#ffb352');
-    wp_enqueue_style('motahed-custom', NAMA_THEME_CSS_DIR . 'motahed-custom.css', []);
+function motahed_custom_color_secondary_2() {
+    $color_code = get_theme_mod('motahed_color_option_3_2', '#ffb352');
+    wp_enqueue_style('motahed-custom', MOTAHED_THEME_CSS_DIR . 'motahed-custom.css', []);
     if ($color_code != '') {
         $custom_css = '';
         $custom_css .= ".demo-class { background-color: " . $color_code . "}";
@@ -424,15 +424,15 @@ function nama_custom_color_secondary_2() {
         wp_add_inline_style('motahed-custom', $custom_css);
     }
 }
-add_action('wp_enqueue_scripts', 'nama_custom_color_secondary_2');
+add_action('wp_enqueue_scripts', 'motahed_custom_color_secondary_2');
 
 
-// nama_kses_intermediate
-function nama_kses_intermediate($string = '') {
-    return wp_kses($string, nama_get_allowed_html_tags('intermediate'));
+// motahed_kses_intermediate
+function motahed_kses_intermediate($string = '') {
+    return wp_kses($string, motahed_get_allowed_html_tags('intermediate'));
 }
 
-function nama_get_allowed_html_tags($level = 'basic') {
+function motahed_get_allowed_html_tags($level = 'basic') {
     $allowed_html = [
         'b'      => [],
         'i'      => [],
@@ -490,7 +490,7 @@ function nama_get_allowed_html_tags($level = 'basic') {
 
 // WP kses allowed tags
 // ----------------------------------------------------------------------------------------
-function nama_kses($raw) {
+function motahed_kses($raw) {
 
     $allowed_tags = array(
         'a'                         => array(

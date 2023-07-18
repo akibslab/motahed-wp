@@ -12,7 +12,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function nama_body_classes($classes) {
+function motahed_body_classes($classes) {
     // Adds a class of hfeed to non-singular pages.
     if (!is_singular()) {
         $classes[] = 'hfeed';
@@ -32,12 +32,12 @@ function nama_body_classes($classes) {
 
     return $classes;
 }
-add_filter('body_class', 'nama_body_classes');
+add_filter('body_class', 'motahed_body_classes');
 
 /**
  * Get tags.
  */
-function nama_get_tag() {
+function motahed_get_tag() {
     $html = '';
     if (has_tag()) {
         $html .= '<div class="ss-post__tags"><span>' . esc_html__('Post Tags : ', 'motahed') . '</span>';
@@ -51,7 +51,7 @@ function nama_get_tag() {
 /**
  * Get categories.
  */
-function nama_get_category() {
+function motahed_get_category() {
 
     $categories = get_the_category(get_the_ID());
     $x = 0;
@@ -66,7 +66,7 @@ function nama_get_category() {
 }
 
 /** img alt-text **/
-function nama_img_alt_text($img_er_id = null) {
+function motahed_img_alt_text($img_er_id = null) {
     $image_id = $img_er_id;
     $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', false);
     $image_title = get_the_title($image_id);
@@ -84,38 +84,38 @@ function nama_img_alt_text($img_er_id = null) {
     return $alt_text;
 }
 
-// nama_offer_sidebar_func
-function nama_offer_sidebar_func() {
+// motahed_offer_sidebar_func
+function motahed_offer_sidebar_func() {
     if (is_active_sidebar('offer-sidebar')) {
 
         dynamic_sidebar('offer-sidebar');
     }
 }
-add_action('nama_offer_sidebar', 'nama_offer_sidebar_func', 20);
+add_action('motahed_offer_sidebar', 'motahed_offer_sidebar_func', 20);
 
-// nama_service_sidebar
-function nama_service_sidebar_func() {
+// motahed_service_sidebar
+function motahed_service_sidebar_func() {
     if (is_active_sidebar('services-sidebar')) {
 
         dynamic_sidebar('services-sidebar');
     }
 }
-add_action('nama_service_sidebar', 'nama_service_sidebar_func', 20);
+add_action('motahed_service_sidebar', 'motahed_service_sidebar_func', 20);
 
-// nama_portfolio_sidebar
-function nama_portfolio_sidebar_func() {
+// motahed_portfolio_sidebar
+function motahed_portfolio_sidebar_func() {
     if (is_active_sidebar('portfolio-sidebar')) {
 
         dynamic_sidebar('portfolio-sidebar');
     }
 }
-add_action('nama_portfolio_sidebar', 'nama_portfolio_sidebar_func', 20);
+add_action('motahed_portfolio_sidebar', 'motahed_portfolio_sidebar_func', 20);
 
-// nama_faq_sidebar
-function nama_faq_sidebar_func() {
+// motahed_faq_sidebar
+function motahed_faq_sidebar_func() {
     if (is_active_sidebar('faq-sidebar')) {
 
         dynamic_sidebar('faq-sidebar');
     }
 }
-add_action('nama_faq_sidebar', 'nama_faq_sidebar_func', 20);
+add_action('motahed_faq_sidebar', 'motahed_faq_sidebar_func', 20);
