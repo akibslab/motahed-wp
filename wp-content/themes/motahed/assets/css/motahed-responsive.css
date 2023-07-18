@@ -48,7 +48,8 @@
 		line-height: 120px;
 		margin-bottom: 10px;
 	}
-	.feature_inner .feature_img img {
+	.feature_inner .feature_img img,
+	.feature_inner .feature_img svg {
 		max-width: 80%;
 	}
 	.feature_inner .feature_text .title {
@@ -154,7 +155,8 @@
 		line-height: 120px;
 		margin-bottom: 10px;
 	}
-	.feature_inner .feature_img img {
+	.feature_inner .feature_img img,
+	.feature_inner .feature_img svg {
 		max-width: 75%;
 	}
 	.feature_inner .feature_text .title {
