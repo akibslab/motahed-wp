@@ -1,0 +1,257 @@
+@media (min-width: 1400px) {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+		max-width: 1240px;
+	}
+}
+/* X-Large devices (large desktops, 1200px to 1400px) */
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+}
+
+/* Large devices (desktops, 992px to 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: 1.1;
+	}
+	.hero_content .title {
+		font-size: 45px;
+	}
+	.working_steps .single_step .step_text {
+		font-size: 28px;
+	}
+	.contact-investment {
+		background-size: 30%;
+	}
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.hero_content .title {
+		font-size: 35px;
+		line-height: 1.1;
+	}
+	.hero_content .text {
+		font-size: 20px;
+	}
+	.feature_inner .feature_img {
+		width: 120px;
+		height: 120px;
+		line-height: 120px;
+		margin-bottom: 10px;
+	}
+	.feature_inner .feature_img img {
+		max-width: 80%;
+	}
+	.feature_inner .feature_text .title {
+		font-size: 20px;
+	}
+	.feature-section {
+		padding-top: 20px;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	h1 {
+		font-size: 45px;
+		line-height: 1.1;
+	}
+	h2 {
+		font-size: 40px;
+		line-height: 1.1;
+	}
+	.section_title .title:before {
+		width: 140px;
+		height: 30px;
+	}
+	.howtowork-img {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.faq-section {
+		margin-top: 0px;
+		padding-bottom: 0;
+		background-size: contain;
+	}
+	.faq-section .section_title .title::before {
+		width: 65px;
+	}
+	.faq_content .accordion-item {
+		padding: 25px 55px 10px 25px;
+	}
+	.faq_content .accordion-item .accordion-header::after {
+		width: 30px;
+		height: 30px;
+		right: -40px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.faq_content .accordion-item .accordion-header {
+		font-size: 18px;
+		line-height: 1.1;
+	}
+	.faq_content .accordion-item .accordion-body {
+		font-size: 17px;
+		line-height: 1.1;
+	}
+	.partners-section {
+		margin-top: 70px;
+		background-size: contain;
+	}
+	.partners-section .section_title .title:before {
+		top: 0;
+		width: 140px;
+	}
+	.contact-investment {
+		padding-bottom: 70px;
+		background-size: 25%;
+	}
+	.section_title p {
+		font-size: 25px;
+		line-height: 1.2;
+	}
+}
+
+/* X-Small devices (small mobile) (portrait phones, less than 767px) */
+@media only screen and (max-width: 767px) {
+	.hero-section {
+		max-height: 100%;
+		height: auto;
+		padding-bottom: 60px;
+	}
+	.hero_img {
+		margin-right: 0px;
+		margin-bottom: 30px;
+	}
+	.hero_content .title {
+		font-size: 30px;
+		line-height: 1.1;
+		margin-bottom: 15px;
+	}
+	.hero_content .text {
+		font-size: 18px;
+	}
+	.hero-section:before,
+	.hero-section:after {
+		display: none;
+	}
+
+	.feature-section {
+		padding-top: 40px;
+		padding-bottom: 30px;
+		margin-bottom: 0;
+	}
+	.feature_inner .feature_img {
+		width: 120px;
+		height: 120px;
+		line-height: 120px;
+		margin-bottom: 10px;
+	}
+	.feature_inner .feature_img img {
+		max-width: 75%;
+	}
+	.feature_inner .feature_text .title {
+		font-size: 20px;
+	}
+	h1 {
+		font-size: 35px;
+		line-height: 1.1;
+	}
+	h2 {
+		font-size: 30px;
+		line-height: 1.1;
+	}
+	.section_title .title:before {
+		width: 100px;
+		height: 20px;
+	}
+
+	.howtowotk {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	.howtowotk .section_title {
+		margin-bottom: 40px;
+	}
+	.howtowork-img {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.working_steps .single_step .step_text {
+		font-size: 20px;
+	}
+	.working_steps .single_step:not(:last-child) {
+		margin-bottom: 60px;
+	}
+	.working_steps .single_step:not(:last-child)::after {
+		height: 50px;
+	}
+	.faq-section {
+		margin-top: 30px;
+		padding-bottom: 0;
+	}
+	.faq-section .section_title .title::before {
+		width: 50px;
+	}
+	.faq_content .accordion-item {
+		padding: 25px 55px 10px 25px;
+	}
+	.faq_content .accordion-item .accordion-header::after {
+		width: 30px;
+		height: 30px;
+		right: -40px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.faq_content .accordion-item .accordion-header {
+		font-size: 18px;
+		line-height: 1.1;
+	}
+	.faq_content .accordion-item .accordion-body {
+		font-size: 17px;
+		line-height: 1.1;
+	}
+	.partners-section {
+		margin-top: 60px;
+	}
+	.partners-section .section_title {
+		margin-bottom: 40px;
+	}
+	.partners_logo {
+		display: flex;
+		justify-content: center;
+		margin: 0 -15px;
+		flex-wrap: wrap;
+	}
+	.partners_logo .single_logo {
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-bottom: 30px;
+		max-width: 150px;
+	}
+	.contact-investment {
+		padding-bottom: 60px;
+		background-size: 25%;
+	}
+	.contact_investment_wrapper .section_title {
+		margin-bottom: 40px;
+	}
+	.contact_investment_wrapper .section_title .title {
+		margin-bottom: 15px;
+	}
+	.section_title p {
+		font-size: 20px;
+		line-height: 1.2;
+	}
+}
+
+/* Small devices (large mobile) (landscape phones, 480px to 767px) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}

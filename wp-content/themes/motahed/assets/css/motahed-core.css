@@ -1,0 +1,566 @@
+/*
+  Author: Theme Junction
+  Support: theme.junction.live@gmail.com
+  Description: Front End Development.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Theme default css
+2. Header Area
+3. Off Canvas Menu
+4. Mobile Menu Area
+5. Hero Area
+*/
+
+/* Theme Default CSS
+==================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+	--color-black: #000000;
+	--color-white: #ffffff;
+
+	--color-primary: #96cb36;
+	--color-secondary: #170066;
+	--color-heading: #061e11;
+	--color-text: #666666;
+	--color-bg: #170066;
+	--color-bg-light: rgba(245, 248, 253, 0.86);
+
+	--color-border: #dddddd;
+	--font-awesome: "Font Awesome 5 Pro";
+	--font-pop: "Poppins", sans-serif;
+}
+body {
+	font-family: var(--font-pop);
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	color: var(--color-text);
+	line-height: 1.4;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+a,
+.button {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+	text-decoration: none;
+}
+
+a:hover,
+.main-menu li a:hover,
+.footer-menu li a:hover {
+	color: var(--color-primary);
+	text-decoration: none;
+}
+a,
+button {
+	color: var(--color-primary);
+	outline: medium none;
+	cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-pop);
+	font-weight: 700;
+	font-style: normal;
+	color: var(--color-heading);
+	line-height: 1.2;
+	margin: 0 0 15px;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 50px;
+}
+h2 {
+	font-size: 50px;
+}
+h3 {
+	font-size: 32px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 20px;
+}
+h6 {
+	font-size: 16px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none;
+}
+p {
+	margin-bottom: 15px;
+}
+
+hr {
+	border-bottom: 1px solid var(--color-border);
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+
+label {
+	color: var(--color-black);
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+*::-moz-selection {
+	background: var(--color-black);
+	color: var(--color-white);
+	text-shadow: none;
+}
+::-moz-selection {
+	background: var(--color-black);
+	color: var(--color-white);
+	text-shadow: none;
+}
+::selection {
+	background: var(--color-black);
+	color: var(--color-white);
+	text-shadow: none;
+}
+*::-moz-placeholder {
+	color: var(--color-border);
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: var(--color-border);
+	font-size: 14px;
+	opacity: 1;
+}
+
+/* button style */
+.btn {
+	-moz-user-select: none;
+	background: var(--color-primary) none repeat scroll 0 0;
+	border: medium none;
+	border-radius: 16px;
+	color: var(--color-secondary);
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 0;
+	line-height: 23px;
+	margin-bottom: 0;
+	padding: 11px 55px 11px 55px;
+	text-align: center;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in-out 0s;
+}
+.btn:hover {
+	background: var(--color-white);
+	color: var(--color-secondary);
+}
+
+input:focus[type="url"],
+input:focus[type="text"],
+input:focus[type="email"],
+input:focus[type="tel"],
+input:focus[type="button"],
+input:focus[type="submit"],
+input:focus[type="search"],
+button:focus[type="button"],
+button:focus[role="button"],
+button:focus,
+input:focus,
+textarea:focus {
+	outline: none;
+	text-decoration: none;
+}
+.btn:focus {
+	box-shadow: 0 0 0 0;
+}
+
+.section_title .title {
+	color: var(--color-primary);
+}
+
+/* start: Hero Section
+==================================================*/
+.hero-section {
+	max-height: 787px;
+	background-color: var(--color-bg);
+	padding-top: 113px;
+	padding-bottom: 75px;
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+}
+.hero_content {
+	max-width: 600px;
+	width: 100%;
+}
+.hero_content .title {
+	margin-bottom: 9px;
+	color: var(--color-white);
+}
+.hero_content .text {
+	font-size: 22px;
+	line-height: 135%;
+	color: var(--color-white);
+}
+.hero_content .hero_btn {
+	margin-top: 8px;
+}
+.hero-section:before,
+.hero-section:after {
+	position: absolute;
+	content: "";
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 50px;
+	width: 32px;
+	height: 45px;
+	border: 2px solid var(--color-white);
+	border-radius: 20px;
+}
+.hero-section:after {
+	width: 4px;
+	height: 7px;
+	border-radius: 11px;
+	bottom: 80px;
+	animation: scroll 4s linear infinite alternate;
+}
+@keyframes scroll {
+	0%,
+	100% {
+		transform: translate(-50%, 0);
+	}
+	50% {
+		transform: translate(-50%, 25px);
+	}
+}
+/* end: Hero Section */
+
+/* start: Feature Section
+==================================================*/
+.feature-section {
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+.feature_inner {
+	text-align: center;
+}
+
+.feature_inner .feature_img {
+	width: 126px;
+	height: 126px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	line-height: 126px;
+	margin-bottom: 20px;
+}
+.feature_inner .feature_img i {
+	line-height: inherit;
+}
+
+.feature_inner .feature_text .title {
+	margin-bottom: 7px;
+}
+.feature_inner .feature_text .desc {
+	max-width: 303px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+}
+.single_feature {
+	margin-bottom: 30px;
+}
+/* end: Feature Section */
+
+/* start: How to Work Section
+==================================================*/
+.howtowotk {
+	background-color: var(--color-bg);
+	padding-top: 114px;
+	padding-bottom: 119px;
+}
+.howtowotk .section_title {
+	margin-bottom: 65px;
+}
+
+.howtowotk .section_title .title {
+	color: var(--color-white);
+}
+.working_steps .single_step .step_text {
+	font-size: 32px;
+	font-weight: 500;
+	color: var(--color-white);
+	line-height: 1.2;
+	position: relative;
+	padding-left: 75px;
+	max-width: 585px;
+	width: 100%;
+}
+
+.working_steps .single_step .step_text .number {
+	display: inline-block;
+	width: 55px;
+	height: 55px;
+	font-size: 32px;
+	border: 4px solid var(--color-primary);
+	line-height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.working_steps .single_step {
+	position: relative;
+	min-height: 76px;
+	display: flex;
+	align-items: center;
+}
+.working_steps .single_step:not(:last-child) {
+	margin-bottom: 110px;
+}
+.working_steps .single_step:not(:last-child)::after {
+	content: "";
+	background-image: url(../img/icons/work-shape.svg);
+	height: 97px;
+	width: 7px;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	top: 83px;
+	left: 25px;
+}
+
+/* end: How to Work Section */
+
+/* start: FAQ Section
+==================================================*/
+.faq-section {
+	margin-top: 120px;
+	padding-bottom: 110px;
+}
+
+.faq_content .accordion-item {
+	background-color: var(--color-bg-light);
+	border-radius: 0px;
+	padding: 40px 80px 30px 40px;
+}
+
+.faq_content .accordion-item:not(:last-child) {
+	margin-bottom: 25px;
+}
+
+.faq_content .accordion-item .accordion-header {
+	font-size: 20px;
+	line-height: 150%;
+	letter-spacing: 0.7px;
+	font-weight: 700;
+	color: var(--color-secondary);
+	margin-bottom: 15px;
+	display: block;
+	cursor: pointer;
+	position: relative;
+}
+.faq_content .accordion-item .accordion-body {
+	font-size: 20px;
+	line-height: 150%;
+	font-weight: 400;
+	color: var(--color-black);
+	margin-bottom: 0;
+	max-width: 1065px;
+	width: 100%;
+}
+.faq_content .accordion-item .accordion-header::after {
+	width: 39px;
+	height: 39px;
+	border-radius: 50%;
+	content: "";
+	position: absolute;
+	right: -40px;
+	background-image: url("../img/icons/arrow-down.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	transition: transform 0.2s ease-in-out;
+}
+.faq_content .accordion-item .accordion-header:not(.collapsed)::after {
+	background-image: url("../img/icons/arrow-up.png");
+}
+/* end: FAQ Section */
+
+/* start: Partners Section
+==================================================*/
+.partners-section {
+	margin-top: 90px;
+	background-size: 100% 300px;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+.partners-section .section_title {
+	margin-bottom: 80px;
+}
+.partners-section .section_title .title:before {
+	top: 4px;
+	width: 205px;
+}
+.partners_logo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 -30px;
+}
+.partners_logo .single_logo {
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 75px;
+}
+/* end: Partners Section */
+
+/* start: Contact Investment
+==================================================*/
+.contact-investment {
+	padding-top: 60px;
+	padding-bottom: 140px;
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.contact_investment_wrapper {
+	max-width: 720px;
+	width: 100%;
+	margin: auto;
+}
+
+.section_title p {
+	font-size: 22px;
+	line-height: 150%;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+.contact_investment_wrapper .section_title {
+	margin-bottom: 80px;
+}
+
+.contact_investment_tabs {
+	border-bottom: 3px solid var(--color-secondary);
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.contact_investment_tabs .nav-item {
+	font-size: 20px;
+	line-height: 32px;
+	position: relative;
+	padding-left: 15px;
+	margin-bottom: 25px;
+	cursor: pointer;
+	color: var(--color-secondary);
+}
+
+.contact_investment_tabs .nav-item:before {
+	position: absolute;
+	content: "";
+	width: 32px;
+	height: 32px;
+	border: 0.5px solid #bcbcbc;
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 100%;
+}
+
+.contact_investment_tabs .nav-item::after {
+	position: absolute;
+	content: "";
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+	left: -26px;
+	transition: all 0.3s ease-in-out 0s;
+}
+.contact_investment_tabs .nav-item.active::after {
+	background-color: var(--color-primary);
+}
+.contact_investment_tab_content {
+	margin-top: 25px;
+}
+.form_group label {
+	display: block;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 400;
+	letter-spacing: 0.99px;
+	color: var(--color-secondary);
+	margin-bottom: 7px;
+}
+.form_group input[type="text"],
+.form_group input[type="email"],
+.form_group input[type="tel"],
+.form_group input[type="url"],
+.form_group textarea {
+	width: 100%;
+	background-color: rgba(100, 100, 100, 0.08);
+	border: none;
+	border-radius: 16px;
+	padding: 10px 20px;
+}
+.form_group textarea {
+	height: 134px;
+	resize: none;
+}
+.form_group {
+	margin-bottom: 13px;
+}
+
+.client_form .btn {
+	width: 100%;
+	margin-top: 12px;
+	font-size: 18px;
+	line-height: 27px;
+	padding: 17px 30px;
+	font-weight: 600;
+	color: var(--color-secondary);
+}
+.client_form .btn:hover {
+	color: var(--color-white);
+}
+/* end: Contact Investment */
