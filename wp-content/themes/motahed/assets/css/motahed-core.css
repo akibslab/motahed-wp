@@ -498,11 +498,16 @@ textarea:focus {
 	content: "";
 	width: 32px;
 	height: 32px;
-	border: 0.5px solid #bcbcbc;
+	border: 0.5px solid #e7e7e7;
+	background-color: #e7e7e7;
 	border-radius: 50%;
 	top: 50%;
 	transform: translateY(-50%);
 	right: 100%;
+}
+
+.contact_investment_tabs .nav-item.active:before {
+	background-color: var(--color-white);
 }
 
 .contact_investment_tabs .nav-item::after {

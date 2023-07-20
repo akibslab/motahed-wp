@@ -18,3 +18,21 @@
 	right: auto;
 	left: -40px;
 }
+.contact_investment_tabs .nav-item {
+	padding-left: 0px;
+	padding-right: 15px;
+}
+
+.contact_investment_tabs .nav-item:before {
+	left: 100%;
+	right: auto;
+}
+
+.contact_investment_tabs .nav-item::after {
+	left: 0;
+	right: -25px;
+}
+
+.contact_investment_tabs .nav-item.active::after {
+	background-color: var(--color-secondary);
+}
