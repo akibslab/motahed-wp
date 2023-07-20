@@ -1,0 +1,12 @@
+.working_steps .single_step .step_text {
+	padding-left: 0;
+	padding-right: 75px;
+}
+.working_steps .single_step .step_text .number {
+	left: auto;
+	right: 0;
+}
+.working_steps .single_step:not(:last-child)::after {
+	left: auto;
+	right: 25px;
+}
