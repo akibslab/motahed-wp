@@ -36,3 +36,14 @@
 .contact_investment_tabs .nav-item.active::after {
 	background-color: var(--color-secondary);
 }
+.form_group input[type="text"],
+.form_group input[type="email"],
+.form_group input[type="tel"],
+.form_group input[type="url"],
+.form_group textarea {
+	text-align: right;
+}
+
+.form_group label {
+	text-align: right;
+}
