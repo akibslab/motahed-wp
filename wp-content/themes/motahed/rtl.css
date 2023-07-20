@@ -10,3 +10,11 @@
 	left: auto;
 	right: 25px;
 }
+.faq_content .accordion-item {
+	padding: 40px 40px 30px 80px;
+}
+
+.faq_content .accordion-item .accordion-header::after {
+	right: auto;
+	left: -40px;
+}
